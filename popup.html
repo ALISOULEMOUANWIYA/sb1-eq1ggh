@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Video Share Pro</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Social Video Share Pro</h1>
+    </header>
+
+    <main>
+      <div class="upload-section">
+        <label for="video-input" class="upload-button">
+          <span class="icon">📤</span>
+          <span>Sélectionner une vidéo</span>
+        </label>
+        <input type="file" id="video-input" accept="video/*" hidden>
+      </div>
+
+      <div class="preview-section" hidden>
+        <video id="video-preview" controls></video>
+        <div class="format-controls">
+          <h3>Format de sortie</h3>
+          <select id="format-select">
+            <option value="instagram">Instagram</option>
+            <option value="tiktok">TikTok</option>
+            <option value="facebook">Facebook</option>
+            <option value="youtube">YouTube</option>
+          </select>
+        </div>
+
+        <div class="metadata-section">
+          <textarea id="description" placeholder="Description..."></textarea>
+          <input type="text" id="hashtags" placeholder="#hashtags">
+          <input type="text" id="mentions" placeholder="@mentions">
+        </div>
+
+        <button id="share-button" class="primary-button">
+          Partager
+        </button>
+      </div>
+    </main>
+
+    <div id="status-message"></div>
+  </div>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
